@@ -3,12 +3,13 @@ require_once "../app/config/config.php";
 require_once "../app/classes/User.php";
 require_once "../app/classes/Rent.php";
 $user = new User();
-if(!$user->is_logged() && !$user->is_admin()){
+if($user->is_logged() && $user->is_admin()){
+    $rent_houses = new Rent();
+    $rent_houses = $rent_houses->show_house($_GET['house_id']);
+}
+else{
     header('location:login.php');
 }
-$rent_houses = new Rent();
-$rent_houses = $rent_houses->fetch_info();
-
 
 ?>
 <!DOCTYPE html>
@@ -22,14 +23,13 @@ $rent_houses = $rent_houses->fetch_info();
     <title>Admin page</title>
 </head>
 <body style="background-color: rgba(0,0,0,0.95);color:white;">
-<div class="container mt-5">
+    <div class="container mt-5">
         <a href="logout.php" class="btn btn-warning">Logout</a>
-        <a href="new-ad.php" class=" btn btn-danger ">Dodaj novi oglas</a>
-        <a href="new-state-or-city.php" class=" btn btn-primary ">Dodaj novu državu i grad</a>
-        <a href="new-ad-type.php" class=" btn btn-primary ">Dodaj novi tip oglasa</a>
+        <a href="" class=" btn btn-danger ">Dodaj novi oglas</a>
+        <a href="" class=" btn btn-primary ">Dodaj novu državu i grad</a>
+        <a href="" class=" btn btn-primary ">Dodaj novi tip oglasa</a>
         <a href="" class=" btn btn-primary ">Dodaj novog usera</a>
     </div>
-    <br>
     <div class="container">
     <table class="table table-striped">
         <thead>
@@ -55,8 +55,8 @@ $rent_houses = $rent_houses->fetch_info();
                 <td class="text-center text-light"><?=$houses['joined_at']?></td>
                 <td class="text-center text-light"><?=$houses['subscribed_to']?></td>
                 <td class="text-center text-light">
-                    <a href="full-info.php?house_id=<?= $houses['house_id']; ?>" class="btn btn-success">Show</a>
-                    <a href="delete_house.php?house_id=<?= $houses['house_id']; ?>" class="btn btn-danger">Delete</a>
+                    <a href="show_house.php?house_id=<?= $reservation['house_id']; ?>" class="btn btn-success">Show</a>
+                    <a href="delete_house.php?house_id=<?= $reservation['house_id']; ?>" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
             <?php endforeach;?>

@@ -22,13 +22,7 @@ $rent_houses = $rent_houses->fetch_info();
     <title>Admin page</title>
 </head>
 <body style="background-color: rgba(0,0,0,0.95);color:white;">
-<div class="container mt-5">
-        <a href="logout.php" class="btn btn-warning">Logout</a>
-        <a href="new-ad.php" class=" btn btn-danger ">Dodaj novi oglas</a>
-        <a href="new-state-or-city.php" class=" btn btn-primary ">Dodaj novu državu i grad</a>
-        <a href="new-ad-type.php" class=" btn btn-primary ">Dodaj novi tip oglasa</a>
-        <a href="" class=" btn btn-primary ">Dodaj novog usera</a>
-    </div>
+    <?php require_once "../admin/inc/header.php";?>
     <br>
     <div class="container">
     <table class="table table-striped">

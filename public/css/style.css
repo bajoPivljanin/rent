@@ -1,0 +1,308 @@
+@font-face {
+  font-family: MyFont;
+  src: url(../site_img/goldplay.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: MyFont;
+}
+
+nav {
+  z-index: 99;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: white;
+  box-shadow: -1px -7px 23px 0px rgba(0, 0, 0, 0.75);
+}
+nav .left-nav {
+  text-align: center;
+}
+nav .left-nav img {
+  width: 8rem;
+  margin-top: 6px;
+}
+nav .right-nav {
+  float: right;
+}
+nav .right-nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+nav .right-nav ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+nav .right-nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1.7rem 1.5rem;
+}
+nav .right-nav ul li a:hover {
+  transition: 0.25s;
+  background-color: rgb(234, 234, 234);
+}
+
+.hero-section {
+  position: relative;
+  z-index: 90;
+  margin-top: 5rem;
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 10000px inset;
+  font-family: myFont;
+  overflow: hidden;
+}
+.hero-section img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1);
+  z-index: -1;
+  filter: brightness(0.6);
+  animation-name: scalehomepage;
+  animation-duration: 80s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.hero-section h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 3.3rem;
+  color: white;
+}
+.hero-section p {
+  margin-top: -0.2rem;
+  color: rgb(210, 210, 210);
+  font-size: 1.2rem;
+}
+.hero-section form {
+  margin-top: 1rem;
+}
+.hero-section form input {
+  border: 1px solid white;
+  width: 65rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+  padding: 11px 20px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+.hero-section form button {
+  padding: 11px 30px;
+  font-size: 1rem;
+  border: 1px solid white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: 0.2s;
+}
+.hero-section form button i {
+  font-weight: bolder;
+}
+.hero-section form button:hover {
+  color: rgb(226, 193, 71);
+}
+
+@keyframes scalehomepage {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.recommend-section {
+  font-family: "goldplay-bold", sans-serif;
+  padding: 5.5rem 14rem;
+}
+.recommend-section #naslovrec {
+  text-align: center;
+  font-weight: 900;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.recommend-section #naslovrec::after {
+  content: "";
+  position: absolute;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(255, 255, 255) 0%, rgb(217, 205, 162) 24%, rgb(226, 193, 71) 53%, rgb(216, 204, 159) 76%, rgb(255, 255, 255) 100%);
+  height: 3px;
+  width: 350px;
+  right: 0;
+  left: 0;
+  bottom: -10px;
+  margin: auto;
+}
+.recommend-section p {
+  text-align: center;
+  width: 40rem;
+  margin: auto;
+}
+
+.swiper {
+  width: 100%;
+  height: 25rem;
+  margin-top: 5rem;
+}
+.swiper .swiper-slide {
+  font-family: "goldplay-bold", sans-serif;
+  font-size: 18px;
+  border-radius: 15px;
+  z-index: -1;
+  padding: 2.5rem 0rem;
+  position: relative;
+}
+.swiper .swiper-slide:hover::before {
+  background-color: rgba(23, 20, 7, 0.8);
+}
+.swiper .swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  transition: background-color 0.3s ease;
+  z-index: -1;
+}
+.swiper .swiper-slide .single-naslov {
+  text-align: center;
+}
+.swiper .swiper-slide .single-naslov h1 {
+  color: white;
+  z-index: 2;
+  font-weight: 900;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: relative;
+}
+.swiper .swiper-slide .single-naslov h1::after {
+  content: "";
+  position: absolute;
+  background: rgb(226, 193, 71);
+  height: 3px;
+  width: 130px;
+  right: 0;
+  left: 0;
+  bottom: -10px;
+  margin: auto;
+}
+.swiper .swiper-slide .single-naslov h5 {
+  color: white;
+  font-weight: 400;
+  margin-top: 1.2rem;
+  letter-spacing: 1px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.swiper .swiper-slide .single-naslov h5 span {
+  color: rgb(226, 193, 71);
+}
+.swiper .swiper-slide .single-naslov h4 {
+  color: white;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  margin-top: 1.2rem;
+}
+.swiper .swiper-slide .lokacija {
+  /*position: absolute;
+  bottom: 20px;
+  left: 20px;
+  float: left;*/
+  width: auto;
+  text-align: left;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  letter-spacing: 1px;
+}
+.swiper .swiper-slide .lokacija #drzavasingle {
+  width: 100%;
+  color: white;
+  text-align: left;
+}
+.swiper .swiper-slide .lokacija #drzavasingle::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  margin-right: 5px;
+  content: "\f0ac";
+  color: rgb(226, 193, 71);
+  font-size: 15px;
+}
+.swiper .swiper-slide .lokacija #gradsingle {
+  width: 100%;
+  color: white;
+  text-align: left;
+}
+.swiper .swiper-slide .lokacija #gradsingle::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 9px;
+  content: "\f3c5";
+  color: rgb(226, 193, 71);
+  font-size: 15px;
+}
+.swiper .swiper-slide .linkdetaljnije {
+  width: auto;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+}
+.swiper .swiper-slide .linkdetaljnije a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border: 1px solid rgb(226, 193, 71);
+  padding: 10px 25px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+.swiper .swiper-slide .linkdetaljnije a:hover {
+  background-color: rgb(226, 193, 71);
+}
+.swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+}/*# sourceMappingURL=style.css.map */

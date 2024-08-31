@@ -1,0 +1,312 @@
+@font-face {
+    font-family: MyFont;
+    src: url(../site_img/goldplay.otf);
+}
+$default:rgb(226, 193, 71);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: MyFont;
+}
+//    box-shadow: rgba(0, 0, 0, 0.7) 0 0 0 10000px inset;
+
+nav{
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: white;
+    -webkit-box-shadow: -1px -7px 23px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px -7px 23px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px -7px 23px 0px rgba(0,0,0,0.75);
+    .left-nav{
+        text-align: center;
+        img{
+            width: 8rem;
+            margin-top: 6px;
+        }
+    }
+    .right-nav{
+        float: right;
+        ul{
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            width: 100%;
+            li{
+                list-style-type: none;
+                display: inline-block;
+               // margin: 0rem 1.5rem;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    padding: 1.7rem 1.5rem;
+                    &:hover{
+                        transition: .25s;
+                        background-color: rgb(234, 234, 234);
+                    }
+                }
+            }
+        }
+    }
+}
+.hero-section{
+    position: relative;
+    z-index: 90;
+    margin-top: 5rem;
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 10000px inset;
+    font-family: myFont;
+    overflow: hidden;
+    img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transform: scale(1);
+        z-index: -1;
+        filter: brightness(0.6);
+        animation-name: scalehomepage;
+        animation-duration: 80s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    h1{
+        text-align: center;
+        font-weight: 900;
+        font-size: 3.3rem;
+        color: white;
+    }
+    p{
+        //font-family: "goldplay-bold", sans-serif;
+        margin-top: -0.2rem;
+        color: rgb(210, 210, 210);
+        font-size: 1.2rem;
+    }
+    form{
+        margin-top: 1rem;
+        input{
+            border: 1px solid white;
+            width: 65rem;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            outline: none;
+            padding: 11px 20px;
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+        button{
+            padding: 11px 30px;
+            font-size: 1rem;
+            border: 1px solid white;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            transition: .2s;
+            i{
+                font-weight: bolder;
+            }
+            &:hover{
+                color: $default;
+            }
+        }
+    }
+}
+
+@keyframes scalehomepage
+{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.recommend-section{
+    font-family: "goldplay-bold", sans-serif;
+    padding: 5.5rem 14rem;
+    #naslovrec{
+        text-align: center;
+        font-weight: 900;
+        position: relative;
+        margin-bottom: 2rem;
+        &::after{
+            content: "";
+            position: absolute;
+            //background-color: $default;
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(217,205,162,1) 24%, $default 53%, rgba(216,204,159,1) 76%, rgba(255,255,255,1) 100%);
+            height: 3px;
+            width: 350px;
+            right: 0;
+            left: 0;
+            bottom: -10px;
+            margin: auto;
+        }
+    }
+    p{
+        text-align: center;
+        width: 40rem;
+        margin: auto;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 25rem;
+    margin-top: 5rem;
+    .swiper-slide {
+        font-family: "goldplay-bold", sans-serif;
+        font-size: 18px;
+        border-radius: 15px;
+        z-index: -1;
+        padding: 2.5rem 0rem;
+        position: relative;
+        &:hover::before {
+            background-color: rgba(23, 20, 7, 0.8) /* Zamračenje slike prilikom hover-a */
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.65);
+            transition: background-color 0.3s ease;
+            z-index: -1;
+        }
+        .single-naslov{
+            text-align: center;
+            h1{
+                color: white;
+                z-index: 2;
+                font-weight: 900;
+                font-size: 1.6rem;
+                letter-spacing: 1px;
+                user-select: none;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    //background-color: $default;
+                    background: $default;
+                    height: 3px;
+                    width: 130px;
+                    right: 0;
+                    left: 0;
+                    bottom: -10px;
+                    margin: auto;
+                }
+            }
+            h5{
+                color: white;
+                font-weight: 400;
+                margin-top: 1.2rem;
+                letter-spacing: 1px;
+                user-select: none;
+                span{
+                    color: $default;
+                }
+            }
+            h4{
+                color: white;
+                font-weight: 400;
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+                user-select: none;
+                margin-top: 1.2rem;
+            }
+        }
+        .lokacija
+        {
+            /*position: absolute;
+            bottom: 20px;
+            left: 20px;
+            float: left;*/
+            width: auto;
+            text-align: left;
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            letter-spacing: 1px;
+            #drzavasingle{
+                width: 100%;
+                color: white;
+                text-align: left;
+                &::before{
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 600;
+                    margin-right: 5px;
+                    content: "\f0ac";
+                    color: $default;
+                    font-size: 15px;
+                }
+            }
+            #gradsingle{
+                width: 100%;
+                color: white;
+                text-align: left;
+                &::before{
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 900;
+                    margin-right: 9px;
+                    content: "\f3c5";
+                    color: $default;
+                    font-size: 15px;
+                }
+            }
+        }
+        .linkdetaljnije{
+            width: auto;
+            position: absolute;
+            bottom: 35px;
+            right: 35px;
+            a{
+                color: white;
+                text-decoration: none;
+                letter-spacing: 1px;
+                border: 1px solid $default;
+                padding: 10px 25px;
+                font-size: .9rem;
+                border-radius: 20px;
+                transition: .3s;
+                font-weight: bold;
+                &:hover{
+                    background-color: $default;
+                }
+            }
+        }
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: .3s;
+           // opacity: .5;
+        }
+      }
+  }

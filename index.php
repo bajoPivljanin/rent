@@ -27,7 +27,7 @@
                             <li><a href="index.php">Početna</a></li>
                             <li><a href="index.php">Iznajmi</a></li>
                             <li><a href="index.php">Oglašavanje</a></li>
-                            <li><a href="index.php">O nama</a></li>
+                            <li><a href="index.php">Info</a></li>
                             <li><a href="index.php">Kontakt</a></li>
                         </ul>
                     </div>
@@ -99,25 +99,142 @@
             </div>
         </div>
 
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide">
+             <img src="./public/site_img/rectest1.jpg" alt="">
+            <div class="single-naslov">
+                <h1>Tvoj Rent</h1>
+                <h4>Auto - Kombi</h4>
+                <h5>Od <span>90€</span>/dan</h5>
+            </div>
+            <div class="lokacija">
+                <p id="drzavasingle">Crna Gora</p>
+                <p id="gradsingle">Podgorica</p>
+            </div>
+            <div class="linkdetaljnije">
+                <a href="#">Detaljnije</a>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+        <img src="./public/site_img/rectest2.jpg" alt="">
+            <div class="single-naslov">
+                <h1>Moj Rent</h1>
+                <h4>Auto</h4>
+                <h5>Od <span>110€</span>/dan</h5>
+            </div>
+            <div class="lokacija">
+                <p id="drzavasingle">Makedonija</p>
+                <p id="gradsingle">Skoplje</p>
+            </div>
+            <div class="linkdetaljnije">
+                <a href="#">Detaljnije</a>
+            </div>
+        </div>
+
+                <div class="swiper-slide">
+             <img src="./public/site_img/rectest1.jpg" alt="">
+            <div class="single-naslov">
+                <h1>Tvoj Rent</h1>
+                <h4>Auto - Kombi</h4>
+                <h5>Od <span>90€</span>/dan</h5>
+            </div>
+            <div class="lokacija">
+                <p id="drzavasingle">Crna Gora</p>
+                <p id="gradsingle">Podgorica</p>
+            </div>
+            <div class="linkdetaljnije">
+                <a href="#">Detaljnije</a>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+        <img src="./public/site_img/rectest2.jpg" alt="">
+            <div class="single-naslov">
+                <h1>Moj Rent</h1>
+                <h4>Auto</h4>
+                <h5>Od <span>110€</span>/dan</h5>
+            </div>
+            <div class="lokacija">
+                <p id="drzavasingle">Makedonija</p>
+                <p id="gradsingle">Skoplje</p>
+            </div>
+            <div class="linkdetaljnije">
+                <a href="#">Detaljnije</a>
+            </div>
+        </div>
+
+                <div class="swiper-slide">
+             <img src="./public/site_img/rectest1.jpg" alt="">
+            <div class="single-naslov">
+                <h1>Tvoj Rent</h1>
+                <h4>Auto - Kombi</h4>
+                <h5>Od <span>90€</span>/dan</h5>
+            </div>
+            <div class="lokacija">
+                <p id="drzavasingle">Crna Gora</p>
+                <p id="gradsingle">Podgorica</p>
+            </div>
+            <div class="linkdetaljnije">
+                <a href="#">Detaljnije</a>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+        <img src="./public/site_img/rectest2.jpg" alt="">
+            <div class="single-naslov">
+                <h1>Moj Rent</h1>
+                <h4>Auto</h4>
+                <h5>Od <span>110€</span>/dan</h5>
+            </div>
+            <div class="lokacija">
+                <p id="drzavasingle">Makedonija</p>
+                <p id="gradsingle">Skoplje</p>
+            </div>
+            <div class="linkdetaljnije">
+                <a href="#">Detaljnije</a>
+            </div>
+        </div>
+
     </div>
     <div class="swiper-pagination"></div>
   </div>
     </div>
 
+    <div class="shortinfo-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="left-info">
+                    <h3>Pronadjite savršen <br><span class="auto-type"></span> <br>za vašu sledeću <br> avanturu.</h3>
+                      <a href="#">Pogledajte ponudu</i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="right-info">
+                      <img src="./public/site_img/shortinfo.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="public/js/script.js"></script>
     <script type="module">
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
         const swiper = new Swiper(...)
 
+</script>
+<script>
+    var typed = new Typed(".auto-type",{
+    strings: ["automobil","motocikl", "kombi", "kvad"],
+    typeSpeed: 150,
+    backSpeed: 150,
+    loop: true,
+})
 </script>
 </body>
 </html>

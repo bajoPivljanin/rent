@@ -89,6 +89,7 @@ nav .right-nav ul li a:hover {
   font-weight: 900;
   font-size: 3.3rem;
   color: white;
+  letter-spacing: 2px;
 }
 .hero-section p {
   margin-top: -0.2rem;
@@ -120,7 +121,7 @@ nav .right-nav ul li a:hover {
   font-weight: bolder;
 }
 .hero-section form button:hover {
-  color: rgb(226, 193, 71);
+  color: #e2c147;
 }
 
 @keyframes scalehomepage {
@@ -136,7 +137,7 @@ nav .right-nav ul li a:hover {
 }
 .recommend-section {
   font-family: "goldplay-bold", sans-serif;
-  padding: 5.5rem 14rem;
+  padding: 6rem 14rem;
 }
 .recommend-section #naslovrec {
   text-align: center;
@@ -148,7 +149,7 @@ nav .right-nav ul li a:hover {
   content: "";
   position: absolute;
   background: rgb(2, 0, 36);
-  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(255, 255, 255) 0%, rgb(217, 205, 162) 24%, rgb(226, 193, 71) 53%, rgb(216, 204, 159) 76%, rgb(255, 255, 255) 100%);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(255, 255, 255) 0%, rgb(217, 205, 162) 24%, #e2c147 53%, rgb(216, 204, 159) 76%, rgb(255, 255, 255) 100%);
   height: 3px;
   width: 350px;
   right: 0;
@@ -206,7 +207,7 @@ nav .right-nav ul li a:hover {
 .swiper .swiper-slide .single-naslov h1::after {
   content: "";
   position: absolute;
-  background: rgb(226, 193, 71);
+  background: #e2c147;
   height: 3px;
   width: 130px;
   right: 0;
@@ -224,7 +225,7 @@ nav .right-nav ul li a:hover {
           user-select: none;
 }
 .swiper .swiper-slide .single-naslov h5 span {
-  color: rgb(226, 193, 71);
+  color: #e2c147;
 }
 .swiper .swiper-slide .single-naslov h4 {
   color: white;
@@ -252,26 +253,34 @@ nav .right-nav ul li a:hover {
   width: 100%;
   color: white;
   text-align: left;
+  font-size: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .swiper .swiper-slide .lokacija #drzavasingle::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 600;
   margin-right: 5px;
   content: "\f0ac";
-  color: rgb(226, 193, 71);
+  color: #e2c147;
   font-size: 15px;
 }
 .swiper .swiper-slide .lokacija #gradsingle {
   width: 100%;
   color: white;
   text-align: left;
+  font-size: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .swiper .swiper-slide .lokacija #gradsingle::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   margin-right: 9px;
   content: "\f3c5";
-  color: rgb(226, 193, 71);
+  color: #e2c147;
   font-size: 15px;
 }
 .swiper .swiper-slide .linkdetaljnije {
@@ -284,7 +293,7 @@ nav .right-nav ul li a:hover {
   color: white;
   text-decoration: none;
   letter-spacing: 1px;
-  border: 1px solid rgb(226, 193, 71);
+  border: 1px solid #e2c147;
   padding: 10px 25px;
   font-size: 0.9rem;
   border-radius: 20px;
@@ -292,7 +301,7 @@ nav .right-nav ul li a:hover {
   font-weight: bold;
 }
 .swiper .swiper-slide .linkdetaljnije a:hover {
-  background-color: rgb(226, 193, 71);
+  background-color: #e2c147;
 }
 .swiper .swiper-slide img {
   display: block;
@@ -305,4 +314,50 @@ nav .right-nav ul li a:hover {
   left: 0;
   top: 0;
   transition: 0.3s;
+}
+
+.shortinfo-section {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(255, 255, 255) 0%, rgb(233, 233, 233) 25%, #d7d7d7 53%, rgb(233, 233, 233) 75%, rgb(255, 255, 255) 100%);
+  padding: 5rem 0rem;
+  background-size: cover;
+}
+.shortinfo-section .container .left-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: auto;
+}
+.shortinfo-section .container .left-info h3 {
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+.shortinfo-section .container .left-info h3 span {
+  text-decoration: underline;
+  text-decoration-color: #e2c147;
+}
+.shortinfo-section .container .left-info a {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border: 1px solid #e2c147;
+  padding: 10px 25px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  transition: 0.3s;
+  font-weight: bold;
+  background-color: #e2c147;
+  margin-left: -6rem;
+}
+.shortinfo-section .container .left-info a:hover {
+  background-color: transparent;
+}
+.shortinfo-section .container .right-info img {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: -10px 10px 24px -9px rgba(0, 0, 0, 0.75);
 }/*# sourceMappingURL=style.css.map */

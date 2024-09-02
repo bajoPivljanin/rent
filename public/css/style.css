@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: MyFont;
   src: url(../site_img/goldplay.otf);
@@ -169,7 +170,6 @@ nav .right-nav ul li a:hover {
   margin-top: 5rem;
 }
 .swiper .swiper-slide {
-  font-family: "goldplay-bold", sans-serif;
   font-size: 18px;
   border-radius: 15px;
   z-index: -1;
@@ -177,7 +177,8 @@ nav .right-nav ul li a:hover {
   position: relative;
 }
 .swiper .swiper-slide:hover::before {
-  background-color: rgba(23, 20, 7, 0.8);
+  background-color: rgba(23, 20, 7, 0.8); /* Zamračenje slike prilikom hover-a */
+  border-radius: 15px;
 }
 .swiper .swiper-slide::before {
   content: "";
@@ -189,6 +190,7 @@ nav .right-nav ul li a:hover {
   background-color: rgba(0, 0, 0, 0.65);
   transition: background-color 0.3s ease;
   z-index: -1;
+  border-radius: 15px;
 }
 .swiper .swiper-slide .single-naslov {
   text-align: center;
@@ -314,13 +316,114 @@ nav .right-nav ul li a:hover {
   left: 0;
   top: 0;
   transition: 0.3s;
+  border-radius: 15px;
+}
+
+.kratakabout-sec {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 7rem 0rem;
+}
+.kratakabout-sec h1 {
+  font-weight: 1000;
+  letter-spacing: 1px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.kratakabout-sec h1::after {
+  content: "";
+  position: absolute;
+  background-color: #e2c147;
+  height: 2px;
+  width: 180px;
+  left: 0;
+  bottom: -5px;
+  margin: auto;
+}
+.kratakabout-sec p {
+  color: rgb(203, 203, 203);
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.kratakabout-sec p span {
+  font-weight: 1000;
+}
+.kratakabout-sec .left-kratak {
+  padding: 0rem 5rem;
+  position: relative;
+}
+.kratakabout-sec .left-kratak a {
+  margin-bottom: -5rem;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border: 1px solid #e2c147;
+  padding: 10px 25px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  transition: 0.3s;
+  font-weight: bold;
+  background-color: #e2c147;
+}
+.kratakabout-sec .left-kratak a:hover {
+  background-color: transparent;
+}
+.kratakabout-sec .left-kratak #leftdrugi {
+  margin-bottom: 3rem;
+}
+.kratakabout-sec .left-kratak #leftinfolink {
+  margin-left: 1rem;
+  background-color: transparent;
+}
+.kratakabout-sec .left-kratak #leftinfolink:hover {
+  background-color: #e2c147;
+}
+.kratakabout-sec .left-kratak::after {
+  content: "";
+  position: absolute;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(229, 199, 89) 25%, rgb(226, 193, 71) 50%, rgb(229, 199, 89) 75%, rgba(255, 255, 255, 0) 100%);
+  height: 300px;
+  width: 1px;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.kratakabout-sec .right-kratak {
+  padding: 2rem 5rem;
+}
+.kratakabout-sec .right-kratak h1::after {
+  width: 120px;
+}
+.kratakabout-sec .right-kratak a {
+  margin-bottom: -5rem;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border: 1px solid #e2c147;
+  padding: 10px 25px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  transition: 0.3s;
+  font-weight: bold;
+  background-color: #e2c147;
+}
+.kratakabout-sec .right-kratak a:hover {
+  background-color: transparent;
+}
+.kratakabout-sec .right-kratak #rightdrugi {
+  margin-bottom: 2rem;
 }
 
 .shortinfo-section {
   background: rgb(2, 0, 36);
-  background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(255, 255, 255) 0%, rgb(233, 233, 233) 25%, #d7d7d7 53%, rgb(233, 233, 233) 75%, rgb(255, 255, 255) 100%);
-  padding: 5rem 0rem;
+  background: linear-gradient(180deg, rgb(2, 0, 36) 0%, rgb(255, 255, 255) 0%, rgb(233, 233, 233) 25%, #c5c5c5 53%, rgb(233, 233, 233) 75%, rgb(255, 255, 255) 100%);
+  padding: 6rem 0rem;
   background-size: cover;
+  position: relative;
 }
 .shortinfo-section .container .left-info {
   display: flex;
@@ -329,6 +432,11 @@ nav .right-nav ul li a:hover {
   justify-content: center;
   height: 100%;
   width: auto;
+}
+.shortinfo-section .container .left-info img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 .shortinfo-section .container .left-info h3 {
   font-weight: 900;

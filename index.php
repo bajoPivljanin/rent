@@ -200,6 +200,33 @@
   </div>
     </div>
 
+    
+    <div class="kratakabout-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="left-kratak">
+                        <h1>Iznajmi vozilo</h1>
+                        <p><span>balkanrent.com</span> je vaša pouzdana platforma za pronalaženje proverenih kompanija za iznajmljivanje vozila <span>širom Balkana.</span> Na našem sajtu možete jednostavno pronaći i kontaktirati pouzdane agencije koje nude iznajmljivanje <span>različitih vrsta vozila</span>.</p>
+                        <p id="leftdrugi">Naš cilj je da vam olakšamo proces pronalaženja odgovarajuće kompanije za iznajmljivanje na lokaciji na kojoj se nalazite ili na koju putujete, tako da možete biti sigurni u kvalitet i pouzdanost usluge koju dobijate.</p>
+                        <a href="#">Pretraga</a>
+                        <a href="#" id="leftinfolink">Informacije</a>
+                        <div class="razdelnakita"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="right-kratak">
+                        <h1>Postavi oglas</h1>
+                        <p>Na našoj platformi možete oglašavati svoje usluge iznajmljivanja vozila i uživati u dva meseca besplatnog oglašavanja.</p>
+                        <p id="rightdrugi">Izaberite jedan od naših paketa, koje možete pregledati na stranici posvećenoj oglašavanju usluga iznajmljivanja vozila, i iskoristite ovu posebnu ponudu da povećate svoju vidljivost i privučete nove klijente.</p>
+                        <a href="#" >Oglašavanje</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="shortinfo-section">
         <div class="container">
             <div class="row">

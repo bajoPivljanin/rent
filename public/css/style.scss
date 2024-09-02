@@ -176,14 +176,15 @@ nav{
     height: 25rem;
     margin-top: 5rem;
     .swiper-slide {
-        font-family: "goldplay-bold", sans-serif;
+        //font-family: "goldplay-bold", sans-serif;
         font-size: 18px;
         border-radius: 15px;
         z-index: -1;
         padding: 2.5rem 0rem;
         position: relative;
         &:hover::before {
-            background-color: rgba(23, 20, 7, 0.8) /* Zamračenje slike prilikom hover-a */
+            background-color: rgba(23, 20, 7, 0.8); /* Zamračenje slike prilikom hover-a */
+            border-radius: 15px;
         }
         &::before {
             content: "";
@@ -195,6 +196,7 @@ nav{
             background-color: rgba(0, 0, 0, 0.65);
             transition: background-color 0.3s ease;
             z-index: -1;
+            border-radius: 15px;
         }
         .single-naslov{
             text-align: center;
@@ -311,17 +313,120 @@ nav{
             left: 0;
             top: 0;
             transition: .3s;
+            border-radius: 15px;
            // opacity: .5;
         }
       }
   }
 
-  .shortinfo-section{
+.kratakabout-sec{
+    background-color: #1c1c1c;
+    color: white;
+    padding: 7rem 0rem;
+    h1{
+        font-weight: 1000;
+        letter-spacing: 1px;
+        position: relative;
+        margin-bottom: 2rem;
+        &::after{
+            content: "";
+            position: absolute;
+            background-color: $default;
+            height: 2px;
+            width: 180px;
+            left: 0;
+            bottom: -5px;
+            margin: auto;
+        }
+    }
+    p{
+        color: rgb(203, 203, 203);
+        font-weight: 100;
+        letter-spacing: 1px;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        span{
+            font-weight: 1000;
+        }
+    }
+    .left-kratak{
+        padding: 0rem 5rem;
+        position: relative;
+        a{
+            margin-bottom: -5rem;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 1px;
+            border: 1px solid $default;
+            padding: 10px 25px;
+            font-size: .9rem;
+            border-radius: 20px;
+            transition: .3s;
+            font-weight: bold;
+            background-color: $default;
+            &:hover{
+                background-color: transparent;
+            }
+        }
+        #leftdrugi{
+            margin-bottom: 3rem;
+        }
+        #leftinfolink{
+            margin-left: 1rem;
+            background-color: transparent;
+            &:hover{
+                background-color: $default;
+            }
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(229,199,89,1) 25%, rgba(226,193,71,1) 50%, rgba(229,199,89,1) 75%, rgba(255,255,255,0) 100%);
+            height: 300px;
+            width: 1px;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+    }
+    .right-kratak{
+        padding: 2rem 5rem;
+        h1{
+            &::after{
+                width: 120px;
+            }
+        }
+        a{
+            margin-bottom: -5rem;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 1px;
+            border: 1px solid $default;
+            padding: 10px 25px;
+            font-size: .9rem;
+            border-radius: 20px;
+            transition: .3s;
+            font-weight: bold;
+            background-color: $default;
+            &:hover{
+                background-color: transparent;
+            }            
+        }
+        #rightdrugi{
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.shortinfo-section{
     //background-color: #e8e8e8;
     background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(233,233,233,1) 25%, #d7d7d7 53%, rgba(233,233,233,1) 75%, rgba(255,255,255,1) 100%);
-    padding: 5rem 0rem;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(233,233,233,1) 25%, #c5c5c5 53%, rgba(233,233,233,1) 75%, rgba(255,255,255,1) 100%);
+    padding: 6rem 0rem;
     background-size: cover;
+    position: relative;
     .container{
         .left-info{
             display: flex;
@@ -330,7 +435,11 @@ nav{
             justify-content: center;
             height: 100%;
             width: auto;
-           
+           img{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+           }
             h3{
                 font-weight: 900;
                 font-size: 2rem;
@@ -369,3 +478,4 @@ box-shadow: -10px 10px 24px -9px rgba(0,0,0,0.75);
         }
     }
   }
+

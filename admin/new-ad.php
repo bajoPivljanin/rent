@@ -25,7 +25,7 @@ if($user->is_logged() && $user->is_admin()):
    $rent = new Rent();
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
-        //if(isset($_POST['submit'])){
+        // if(isset($_POST['submit'])){
             $name = $_POST['name'];
             $type_id = $_POST['type_id'];
             $city_id = $_POST['city_id'];
@@ -40,26 +40,52 @@ if($user->is_logged() && $user->is_admin()):
             $subscribed_to = $_POST['subscribed_to'];
             $ad_type_id = $_POST['ad_type_id'];
 
-            $totalFiles = count ($_FILES['fileImg']['name']);
+            // $totalFiles = count ($_FILES['fileImg']['name']);
+            // $filesArray = array();
+
+            // for($i = 0;$i < $totalFiles; $i++){
+            //     $imgName = $_FILES['fileImg']['name'][$i];
+            //     $tmpName = $_FILES['fileImg']['name'][$i];
+
+            //     $imageExtension = explode('.',$imgName);
+            //     $imageExtension = strtolower(end($imageExtension));
+
+            //     $newImageName  = uniqid(). '.' . $imageExtension;
+
+            //     move_uploaded_file($tmpName,'../img/' . $newImageName);
+            //     $filesArray[] = $newImageName;
+            // }
+            // $filesArray = json_encode($filesArray);
+
+            $totalFiles = count($_FILES['fileImg']['name']);
             $filesArray = array();
-
-            for($i = 0;$i < $totalFiles; $i++){
-                $imgName = $_FILES['fileImg']['name'][$i];
-                $tmpName = $_FILES['fileImg']['name'][$i];
-
-                $imageExtension = explode('.',$imgName);
-                $imageExtension = strtolower(end($imageExtension));
-
-                $newImageName  = uniqid(). '.' . $imageExtension;
-
-                move_uploaded_file($tmpName,'../public/rent_img/' . $newImageName);
-                $filesArray[] = $newImageName;
+            
+            if (!is_dir('../public/rent_img/')) {
+                mkdir('../public/rent_img/', 0755, true);
             }
+            
+            for ($i = 0; $i < $totalFiles; $i++) {
+                if ($_FILES['fileImg']['error'][$i] === UPLOAD_ERR_OK) {
+                    $imgName = $_FILES['fileImg']['name'][$i];
+                    $tmpName = $_FILES['fileImg']['tmp_name'][$i];
+            
+                    $imageExtension = explode('.', $imgName);
+                    $imageExtension = strtolower(end($imageExtension));
+            
+                    $newImageName = uniqid() . '.' . $imageExtension;
+            
+                    if (move_uploaded_file($tmpName, '../public/rent_img/' . $newImageName)) {
+                        $filesArray[] = $newImageName;
+                    } else {
+                        echo "Failed to move uploaded file.";
+                    }
+                } else {
+                    echo "Error uploading file: " . $_FILES['fileImg']['error'][$i];
+                }
+            }
+            
             $filesArray = json_encode($filesArray);
-
-           // $new_rent = $rent->create($name,$type_id,$city_id,$state_id,$phone,$price,$email,$instagram,$site_url,$site_name,$filesArray,$description,$subscribed_to,$ad_type_id);
-            //var_dump($name,$type_id,$city_id,$state_id,$phone,$price,$email,$instagram,$site_url,$site_name,$filesArray,$description,$subscribed_to,$ad_type_id);
-
+            $new_rent = $rent->create($name,$type_id,$city_id,$state_id,$phone,$price,$email,$instagram,$site_url,$site_name,$filesArray,$description,$subscribed_to,$ad_type_id);
         //}
     
     }
@@ -150,10 +176,10 @@ if($user->is_logged() && $user->is_admin()):
                 <?php endforeach;?>
             </select>
         </div>
-        <!-- <div class="form-group mb-3">
+        <div class="form-group mb-3">
             <label for="pictures">Slike</label>
             <input type="file" name="fileImg[]" accept=".jpg, .jpeg, .png" required multiple>
-        </div> -->
+        </div>
         <button type="submit" class="btn btn-primary">Dodaj</button>
     </form>
     </div>

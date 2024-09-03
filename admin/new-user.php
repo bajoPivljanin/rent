@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $created = $user->login($username,$password);
+    $created = $user->create($username,$password);
 
     if($created){
         $_SESSION['message']['type'] = "success";
@@ -32,9 +32,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Admin page</title>
 </head>
-<body class="bg-dark text-light">
+<body style="background-color: rgba(0,0,0,0.95);color:white;">
+<?php require_once "../admin/inc/header.php";?>
     <div class="container">
-    <h1 class="mt-5 mb-3">Login</h1>
+    <h1 class="mt-5 mb-3">Register</h1>
     <form action="" method="post">
         <div class="form-group mb-3">
             <label for="username">Username</label>
@@ -44,7 +45,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             <label for="password">Password</label>
             <input type="password" name="password" id="password" class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-primary">Register</button>
     </form>
     </div>
 

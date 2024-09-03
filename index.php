@@ -12,7 +12,6 @@
     <title>Iznajmi vozilo</title>
 </head>
 <body>
-    <h1>ovo je test</h1>
     <nav>
         <div class="container">
             <div class="row">

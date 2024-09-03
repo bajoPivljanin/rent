@@ -28,5 +28,14 @@ class Rent{
         $rez = $result->get_result();
         return $rez->fetch_assoc();
     }
+    public function create($name,$type_id,$city_id,$state_id,$phone,$price,$email,$instagram,$site_url,$site_name,$pictures,$description,$subscibed_to,$ad_type_id){
+        $sql = "INSERT INTO rent_house (name,type_id,city_id,state_id,phone,price,email,instagram,site_url,site_name,pictures,description,subscibed_to,ad_type_id) 
+        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+
+        $stmt = $this->conn->prepare($sql);
+
+        $stmt->bind_param("siiissssssssdi",$name,$type_id,$city_id,$state_id,$phone,$price,$email,$instagram,$site_url,$site_name,$pictures,$description,$subscibed_to,$ad_type_id);
+        $result = $stmt->execute();
+    }
     
 }

@@ -5,6 +5,8 @@ require_once "../app/classes/State.php";
 require_once "../app/classes/City.php";
 require_once "../app/classes/AdType.php";
 require_once "../app/classes/HouseType.php";
+require_once "../app/classes/Rent.php";
+
 $user = new User();
 
 if($user->is_logged() && $user->is_admin()):
@@ -20,22 +22,45 @@ if($user->is_logged() && $user->is_admin()):
    $house_type = new HouseType();
    $house_types = $house_type->fetch_all();
 
-    if($_SERVER['REQUEST_METHOD'] == "POST"){
-        // if (isset($_POST['form_type'])) {
-        //     $form_type = $_POST['form_type'];
-        //     $state_name = $_POST['state_name'];
-        //     $city_name = $_POST['city_name'];
-        //     $stateid = $_POST['state_id'];
+   $rent = new Rent();
 
-        //     switch ($form_type) {
-        //         case 'form1':
-        //             $state = $state->create_state($state_name);
-        //             break;
-        //         case'form2':
-        //             $city = $city->create_city($city_name,$stateid);
-        //             break;
-        //     }
-        // }
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        //if(isset($_POST['submit'])){
+            $name = $_POST['name'];
+            $type_id = $_POST['type_id'];
+            $city_id = $_POST['city_id'];
+            $state_id = $_POST['state_id'];
+            $phone = $_POST['phone'];
+            $price = $_POST['price'];
+            $email = $_POST['email'];
+            $instagram = $_POST['instagram'];
+            $site_url = $_POST['site_url'];
+            $site_name = $_POST['site_name'];
+            $description = $_POST['description'];
+            $subscribed_to = $_POST['subscribed_to'];
+            $ad_type_id = $_POST['ad_type_id'];
+
+            $totalFiles = count ($_FILES['fileImg']['name']);
+            $filesArray = array();
+
+            for($i = 0;$i < $totalFiles; $i++){
+                $imgName = $_FILES['fileImg']['name'][$i];
+                $tmpName = $_FILES['fileImg']['name'][$i];
+
+                $imageExtension = explode('.',$imgName);
+                $imageExtension = strtolower(end($imageExtension));
+
+                $newImageName  = uniqid(). '.' . $imageExtension;
+
+                move_uploaded_file($tmpName,'../public/rent_img/' . $newImageName);
+                $filesArray[] = $newImageName;
+            }
+            $filesArray = json_encode($filesArray);
+
+           // $new_rent = $rent->create($name,$type_id,$city_id,$state_id,$phone,$price,$email,$instagram,$site_url,$site_name,$filesArray,$description,$subscribed_to,$ad_type_id);
+            //var_dump($name,$type_id,$city_id,$state_id,$phone,$price,$email,$instagram,$site_url,$site_name,$filesArray,$description,$subscribed_to,$ad_type_id);
+
+        //}
     
     }
 ?>
@@ -52,8 +77,7 @@ if($user->is_logged() && $user->is_admin()):
 <?php require_once "../admin/inc/header.php";?>
     <div class="container">
     <h1 class="mt-5 mb-3">Dodaj novi oglas</h1>
-    <form action="" method="post">
-    <input type="hidden" name="form_type" value="form1">
+    <form enctype="multipart/form-data" action="" method="post">
         <div class="form-group mb-3">
             <label for="name">Naziv rent kuće</label>
             <input type="text" name="name" id="name" class="form-control">
@@ -68,8 +92,8 @@ if($user->is_logged() && $user->is_admin()):
             </select>
         </div>
         <div class="form-group mb-3">
-            <label for="type_id">Grad</label>
-            <select name="type_id" class="form-control">
+            <label for="city_id">Grad</label>
+            <select name="city_id" class="form-control">
                 <option value="" disabled selected>Izaberi grad</option>
                 <?php foreach($cities as $onecity):?>
                     <option value="<?=$onecity['city_id'];?>" ><?=$onecity['name'];?></option>
@@ -77,7 +101,7 @@ if($user->is_logged() && $user->is_admin()):
             </select>
         </div>
         <div class="form-group mb-3">
-        <label for="type_id">Država</label>
+        <label for="state_id">Država</label>
             <select name="state_id" class="form-control">
                 <option value="" disabled selected>Izaberite državu</option>
                 <?php foreach($states as $onestate):?>
@@ -118,7 +142,7 @@ if($user->is_logged() && $user->is_admin()):
             <input type="date" name="subscribed_to" id="subscribed_to" class="form-control">
         </div>
         <div class="form-group mb-3">
-            <label for="type_id">Tip oglasa</label>
+            <label for="ad_type_id">Tip oglasa</label>
             <select name="ad_type_id" class="form-control">
                 <option value="" disabled selected>Izaberite tip oglasa</option>
                 <?php foreach($adtypes as $type):?>
@@ -126,18 +150,13 @@ if($user->is_logged() && $user->is_admin()):
                 <?php endforeach;?>
             </select>
         </div>
+        <!-- <div class="form-group mb-3">
+            <label for="pictures">Slike</label>
+            <input type="file" name="fileImg[]" accept=".jpg, .jpeg, .png" required multiple>
+        </div> -->
         <button type="submit" class="btn btn-primary">Dodaj</button>
     </form>
     </div>
-    <!-- <div class="form-group mb-3">
-            <select name="state_id" class="form-control">
-                <option value="" disabled selected>Izaberite državu</option>
-                <?php foreach($adtypes as $type):?>
-                    <option value="<?=$type['ad_type_id'];?>" ><?=$type['ad_name'];?></option>
-                <?php endforeach;?>
-            </select>
-        </div> -->
-
 </body>
 </html>
 <?php else:

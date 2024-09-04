@@ -12,7 +12,6 @@
     <title>Iznajmi vozilo</title>
 </head>
 <body>
-    
     <nav>
         <div class="container">
             <div class="row">

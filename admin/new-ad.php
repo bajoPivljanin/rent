@@ -40,23 +40,6 @@ if($user->is_logged() && $user->is_admin()):
             $subscribed_to = $_POST['subscribed_to'];
             $ad_type_id = $_POST['ad_type_id'];
 
-            // $totalFiles = count ($_FILES['fileImg']['name']);
-            // $filesArray = array();
-
-            // for($i = 0;$i < $totalFiles; $i++){
-            //     $imgName = $_FILES['fileImg']['name'][$i];
-            //     $tmpName = $_FILES['fileImg']['name'][$i];
-
-            //     $imageExtension = explode('.',$imgName);
-            //     $imageExtension = strtolower(end($imageExtension));
-
-            //     $newImageName  = uniqid(). '.' . $imageExtension;
-
-            //     move_uploaded_file($tmpName,'../img/' . $newImageName);
-            //     $filesArray[] = $newImageName;
-            // }
-            // $filesArray = json_encode($filesArray);
-
             $totalFiles = count($_FILES['fileImg']['name']);
             $filesArray = array();
             

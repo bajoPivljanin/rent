@@ -279,7 +279,7 @@
                 </div>
             </div>
         </div>
-        <p id="footerp">© Copyright 2022. All rights reserved.</p>
+        <p id="footerp">© Copyright 2024. All rights reserved.</p>
     </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

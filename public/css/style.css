@@ -19,6 +19,12 @@ nav {
   background-color: white;
   box-shadow: -1px -7px 23px 0px rgba(0, 0, 0, 0.75);
 }
+nav #menuopen {
+  display: none;
+}
+nav #menuclose {
+  display: none;
+}
 nav .left-nav {
   text-align: center;
 }
@@ -569,7 +575,7 @@ footer #footerp {
   text-align: center;
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   nav .left-nav {
     text-align: left;
     position: relative;
@@ -583,6 +589,9 @@ footer #footerp {
     top: 1.7rem;
     font-size: 1.7rem;
     transition: 0.3s;
+  }
+  nav .left-nav #menuopen {
+    display: block;
   }
   nav .col-md-7 {
     padding: 0px;
@@ -608,7 +617,7 @@ footer #footerp {
     border-top: 1px solid #c5c5c5;
   }
   .recommend-section {
-    padding: 6rem 0rem;
+    padding: 6rem 2rem;
   }
   .recommend-section p {
     width: auto;
@@ -697,8 +706,39 @@ footer #footerp {
     box-shadow: rgba(0, 0, 0, 0.35) 0 0 0 10000px inset;
     zoom: 0.9;
     padding: 11rem 0rem;
+    background-size: cover;
   }
   .shortinfo-section img {
     display: none !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  nav .right-nav ul {
+    margin-left: 9rem;
+  }
+  nav .right-nav ul li a {
+    font-size: 1rem;
+  }
+  nav .left-nav a {
+    margin-right: 10rem;
+  }
+  .hero-section form input {
+    width: 40rem;
+  }
+  .recommend-section p {
+    text-align: center;
+    width: 100%;
+  }
+  .recommend-section {
+    padding: 6rem 2rem;
+  }
+  .kratakabout-sec .left-kratak {
+    padding: 0rem 1rem;
+  }
+  .kratakabout-sec .right-kratak {
+    padding: 4rem 1rem;
+  }
+  .shortinfo-section .left-info {
+    zoom: 0.8;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -7,13 +7,26 @@ var swiper = new Swiper(".mySwiper", {
         enabled:false,
     },
     autoplay: {
-        enabled: true,
+        enabled: false,
         speed: 3000,
     },
     loop: {
         enabled:true,
+    },
+});
+
+if (window.innerWidth <= 650)
+    {
+      var sswiper = new Swiper(".mySwiper", {
+          loop:true,
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+        });
     }
-    });
 
 let menuopen = document.querySelector("nav .left-nav #menuopen").addEventListener("click", ()=>{
     let right=document.querySelector("nav .right-nav");

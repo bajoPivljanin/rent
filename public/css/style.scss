@@ -11,7 +11,6 @@ $default:#e2c147;
     font-family: MyFont;
 }
 //    box-shadow: rgba(0, 0, 0, 0.7) 0 0 0 10000px inset;
-
 nav{
     z-index: 99;
     position: fixed;
@@ -422,11 +421,13 @@ background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(229,199,89,1) 25%
 
 .shortinfo-section{
     //background-color: #e8e8e8;
-    background: rgb(2,0,36);
+    background: rgb(2,0,36) ;
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(233,233,233,1) 25%, #c5c5c5 53%, rgba(233,233,233,1) 75%, rgba(255,255,255,1) 100%);
     padding: 7rem 0rem;
-    background-size: cover;
     position: relative;
+    background-image:  none ;
+    box-shadow: none ;
+    color: black ;
     .container{
         .left-info{
             display: flex;
@@ -436,6 +437,7 @@ background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(229,199,89,1) 25%
             height: 100%;
             width: auto;
            img{
+            display: block;
             position: absolute;
             left: 0px;
             top: 0px;
@@ -469,6 +471,7 @@ background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(229,199,89,1) 25%
         }
         .right-info{
             img{
+                display: block;
                 width: 100%;
                 border-radius: 30px;
                 -webkit-box-shadow: -10px 10px 24px -9px rgba(0,0,0,0.75);
@@ -572,4 +575,147 @@ footer{
         margin-top: 2rem;
         text-align: center;
     }
+}
+
+@media screen and (min-width:320px) and (max-width:425px)
+{
+    nav{
+        .left-nav{
+            text-align: left;
+            position: relative;
+            #menuclose{
+                display: none;
+            }
+            i{
+                position: absolute;
+                right: 1rem;
+                top: 1.7rem;
+                font-size: 1.7rem;
+                transition: .3s;
+            }
+        }
+        .col-md-7{
+            padding: 0px;
+        }
+        .right-nav{
+            float:none;
+            height: 0rem;
+            display: none;
+            transition: .3s;
+            ul{
+                display: block;
+                text-align: center;
+                background-color: white;
+                height: 11rem;
+                width: 100%;
+                border-bottom: 1px solid #c5c5c5;
+                li{
+                    display: block;
+                    width: 100%;
+                    padding: 3px 0rem;
+                    border-top: 1px solid #c5c5c5;
+                }
+            }
+        }
+    }
+
+  .recommend-section{
+    padding: 6rem 0rem;
+    p{
+        width: auto;
+    }
+  }  
+  .hero-section{
+    height: 44rem;
+    h1{
+        font-size: 2rem;
+    }
+    p{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    form{
+        width: 100%;
+        text-align: center;
+        input{
+            width: 70%;
+            font-size: .7rem;
+        }
+        button{
+            font-size: .7rem;
+        }
+    }
+  }
+  .kratakabout-sec{
+    zoom: .9;
+    padding: 6rem 0rem;
+    .left-kratak{
+        margin-bottom: 7rem;
+        padding: 0rem;
+        text-align: center;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        &::after{
+            content: "";
+            display: none;
+        }
+        h1{
+            &::after{
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+    }
+    .right-kratak{
+        padding: 0rem;
+        text-align: center;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        &::after{
+            content: "";
+            display: none;
+        }
+        h1{
+            &::after{
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+    }
+  }
+  footer{
+    zoom: .9;
+    .left-footer{
+        display: block;
+        margin-bottom: 4rem;
+        margin-left: 2rem;
+        img{
+            margin-left: -1rem;
+        }
+    }
+    .mid-footer{
+        display: block;
+        margin-bottom: 4rem;
+        margin-left: 2rem;
+    }
+    .right-footer{
+        display: block;
+        margin-left: 2rem;
+    }
+  }
+
+  .shortinfo-section{
+    background-image: url(../site_img/shortinfo.jpg);
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 0 0 10000px inset;
+    zoom: .9;
+    padding: 11rem 0rem;
+    img{
+        display: none !important;
+    }
+}
 }

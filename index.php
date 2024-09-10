@@ -18,6 +18,8 @@
                 <div class="col-md-4">
                     <div class="left-nav">
                         <a href="index.php"><img src="./public/site_img/logo.png" alt=""></a>
+                        <i class="fa-solid fa-bars" id="menuopen"></i>
+                        <i class="fa-solid fa-xmark" id="menuclose"></i>
                     </div>
                 </div>
                 <div class="col-md-7">

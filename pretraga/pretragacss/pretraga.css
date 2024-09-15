@@ -1,0 +1,313 @@
+@font-face {
+  font-family: MyFont;
+  src: url(./goldplay.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: MyFont;
+}
+
+nav {
+  z-index: 99;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: white;
+  box-shadow: -1px -7px 23px 0px rgba(0, 0, 0, 0.75);
+}
+nav #menuopen {
+  display: none;
+}
+nav #menuclose {
+  display: none;
+}
+nav .left-nav {
+  text-align: center;
+}
+nav .left-nav img {
+  width: 8rem;
+  margin-top: 6px;
+}
+nav .right-nav {
+  float: right;
+}
+nav .right-nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+nav .right-nav ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+nav .right-nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1.7rem 1.5rem;
+}
+nav .right-nav ul li a:hover {
+  transition: 0.25s;
+  background-color: rgb(234, 234, 234);
+}
+
+.oglasi {
+  margin-top: 5rem;
+}
+.oglasi .pretraga-oglasi {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.oglasi .pretraga-oglasi form {
+  margin-bottom: 1.5rem;
+}
+.oglasi .pretraga-oglasi form input {
+  outline: none;
+  background-color: #f0f3f5;
+  letter-spacing: 1.2px;
+  padding: 15px 20px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 30rem;
+}
+.oglasi .pretraga-oglasi form button {
+  background-color: #f0f3f5;
+  color: #e2c147;
+  font-weight: bold;
+  padding: 15px 35px;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: 0.3s;
+}
+.oglasi .pretraga-oglasi form button:hover {
+  background-color: #e9e9e9;
+}
+.oglasi .pretraga-oglasi p {
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.oglasi .pretraga-oglasi p i {
+  color: #e2c147;
+  margin-left: 5px;
+}
+.oglasi .single-oglas {
+  border: 2px solid #e2c147;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  height: auto;
+  overflow: hidden;
+  box-shadow: -2px 6px 15px -6px rgba(0, 0, 0, 0.75);
+}
+.oglasi .single-oglas h1 {
+  font-weight: 1000;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+.oglasi .single-oglas .container {
+  padding: 0px;
+}
+.oglasi .single-oglas img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.oglasi .single-oglas ul {
+  padding-left: 0px;
+  margin: 0.5rem 0rem;
+}
+.oglasi .single-oglas ul li {
+  list-style: none;
+  font-size: 0.8rem;
+  color: #545454;
+  margin-bottom: 2px;
+}
+.oglasi .single-oglas ul li i {
+  color: #e2c147;
+  margin-right: 7px;
+}
+.oglasi .single-oglas ul li #zadnjigr {
+  margin-right: 5px;
+}
+.oglasi .single-oglas .oglas-tekst {
+  padding: 1rem 0rem;
+}
+.oglasi .single-oglas .oglas-tekst p {
+  color: #545454;
+}
+.oglasi .single-oglas .detalj-oglas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+  color: black;
+}
+.oglasi .single-oglas .detalj-oglas h1 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.oglasi .single-oglas .detalj-oglas h1 span {
+  color: #e2c147;
+  font-weight: 1000;
+}
+.oglasi .single-oglas .detalj-oglas a {
+  background-color: #e2c147;
+  border-radius: 15px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  border: 1px solid #e2c147;
+}
+.oglasi .single-oglas .detalj-oglas a:hover {
+  background-color: transparent;
+  color: black;
+  border: 1px solid #e2c147;
+}
+.oglasi .left-pretraga {
+  margin: 2rem 4rem;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 3px 14px -2px rgba(0, 0, 0, 0.75);
+}
+.oglasi .left-pretraga h1 {
+  text-align: left;
+  font-weight: 1000;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.oglasi .left-pretraga select {
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  background-color: #f0f3f5;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  width: 15rem;
+  margin-bottom: 1rem;
+}
+.oglasi .left-pretraga select option:hover {
+  box-shadow: 0 0 10px 100px #1882A8 inset;
+}
+.oglasi .left-pretraga #pretraga-tip {
+  margin-top: 1rem;
+}
+.oglasi .left-pretraga i {
+  color: #e2c147;
+  margin-left: 5px;
+  font-size: 1.1rem;
+}
+
+footer {
+  position: relative;
+  color: white;
+  background-color: #1c1c1c;
+  padding: 7rem 0rem;
+  padding-bottom: 2rem;
+}
+footer .container {
+  border-bottom: 1px solid #e2c147;
+  padding-bottom: 3rem;
+}
+footer p {
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1px;
+  color: #cbcbcb;
+}
+footer h4 {
+  font-weight: 1000;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+footer .left-footer {
+  display: table;
+  margin: 0 auto;
+}
+footer .left-footer img {
+  width: 13rem;
+  margin-bottom: 0.5rem;
+}
+footer .left-footer i {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  border: 1px solid #e2c147;
+  border-radius: 1000%;
+  padding: 0.7rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+footer .left-footer i:hover {
+  background-color: #e2c147;
+}
+footer .mid-footer {
+  display: table;
+  margin: 0 auto;
+}
+footer .mid-footer ul {
+  padding-left: 0px;
+}
+footer .mid-footer ul li {
+  list-style: none;
+  margin-bottom: 0.3rem;
+}
+footer .mid-footer ul li a {
+  text-decoration: none;
+  color: #cbcbcb;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+footer .mid-footer ul li a:hover {
+  color: #e2c147;
+}
+footer .right-footer {
+  display: table;
+  margin: 0 auto;
+}
+footer .right-footer ul {
+  padding-left: 0px;
+}
+footer .right-footer ul li {
+  list-style: none;
+  margin-bottom: 0.3rem;
+}
+footer .right-footer ul li a {
+  text-decoration: none;
+  color: #cbcbcb;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+footer .right-footer ul li a i {
+  margin-right: 10px;
+  color: #e2c147;
+}
+footer .right-footer ul li a:hover {
+  color: #e2c147;
+}
+footer #footerp {
+  margin-top: 2rem;
+  text-align: center;
+}/*# sourceMappingURL=pretraga.css.map */

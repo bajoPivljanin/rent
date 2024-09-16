@@ -62,7 +62,21 @@
                             <option value="">Boss</option>
                         </select>
                         <h1 id="pretraga-tip">Tip vozila<i class="fa-solid fa-chevron-down"></i></h1>
+                        <form action="">
+                            <input type="checkbox" value="auto" id="auto">
+                            <label for="auto">Automobil</label><br>
+                            <input type="checkbox" value="motor" id="motor">
+                            <label for="motor">Motor</label><br>
+                            <input type="checkbox" value="kvad" id="kvad">
+                            <label for="kvad">Kvad</label><br>
+                            <input type="checkbox" value="kombi" id="kombi">
+                            <label for="kombi">Kombi</label>
+                        </form>
+                        <!-- <div class="potvrda-pretrage"> -->
+                            <a href="#">Potvrdi filtere</a>
+                        <!-- </div> -->
                     </div>
+
                 </div>
                 <div class="col-md-8">
                     <div class="pretraga-oglasi">

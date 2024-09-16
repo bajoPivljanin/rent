@@ -183,7 +183,7 @@ nav .right-nav ul li a:hover {
 }
 .oglasi .left-pretraga {
   margin: 2rem 4rem;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0px 3px 14px -2px rgba(0, 0, 0, 0.75);
 }
@@ -215,6 +215,41 @@ nav .right-nav ul li a:hover {
   color: #e2c147;
   margin-left: 5px;
   font-size: 1.1rem;
+}
+.oglasi .left-pretraga form {
+  margin-bottom: 2rem;
+}
+.oglasi .left-pretraga form input {
+  margin-right: 10px;
+  margin-top: 5px;
+  accent-color: #e2c147;
+  cursor: pointer;
+}
+.oglasi .left-pretraga form input:checked {
+  background-color: #e2c147;
+}
+.oglasi .left-pretraga form label {
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.oglasi .left-pretraga a {
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+  border: 3px solid #e2c147;
+  border-radius: 20px;
+  padding: 0.6rem 1rem;
+  display: block;
+  text-align: center;
+  font-weight: 1000;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+.oglasi .left-pretraga a:hover {
+  background-color: #e2c147;
 }
 
 footer {

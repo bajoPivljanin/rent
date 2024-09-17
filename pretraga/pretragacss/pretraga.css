@@ -345,4 +345,117 @@ footer .right-footer ul li a:hover {
 footer #footerp {
   margin-top: 2rem;
   text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  nav .left-nav {
+    text-align: left;
+    position: relative;
+  }
+  nav .left-nav #menuclose {
+    display: none;
+  }
+  nav .left-nav i {
+    position: absolute;
+    right: 1rem;
+    top: 1.7rem;
+    font-size: 1.7rem;
+    transition: 0.3s;
+  }
+  nav .left-nav #menuopen {
+    display: block;
+  }
+  nav .col-md-7 {
+    padding: 0px;
+  }
+  nav .right-nav {
+    float: none;
+    height: 0rem;
+    display: none;
+    transition: 0.3s;
+  }
+  nav .right-nav ul {
+    display: block;
+    text-align: center;
+    background-color: white;
+    height: 11rem;
+    width: 100%;
+    border-bottom: 1px solid #c5c5c5;
+  }
+  nav .right-nav ul li {
+    display: block;
+    width: 100%;
+    padding: 3px 0rem;
+    border-top: 1px solid #c5c5c5;
+  }
+  .oglasi .left-pretraga {
+    margin: 2rem 1rem;
+  }
+  .oglasi .left-pretraga select {
+    width: 100%;
+  }
+  .oglasi .pretraga-oglasi form {
+    text-align: center;
+  }
+  .oglasi .pretraga-oglasi form input {
+    width: 70%;
+  }
+  .oglasi .single-oglas img {
+    border-bottom-left-radius: 0px;
+  }
+  .oglasi .single-oglas .oglas-tekst {
+    padding: 1rem 1.5rem;
+  }
+  .oglasi .single-oglas .detalj-oglas {
+    display: block;
+    text-align: left;
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+  }
+  .oglasi .single-oglas .detalj-oglas h1 {
+    width: 100%;
+    margin-top: -15px;
+  }
+  footer {
+    zoom: 0.9;
+  }
+  footer .left-footer {
+    display: block;
+    margin-bottom: 4rem;
+    margin-left: 2rem;
+  }
+  footer .left-footer img {
+    margin-left: -1rem;
+  }
+  footer .mid-footer {
+    display: block;
+    margin-bottom: 4rem;
+    margin-left: 2rem;
+  }
+  footer .right-footer {
+    display: block;
+    margin-left: 2rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .oglasi .container {
+    max-width: 100%;
+  }
+  .oglasi .left-pretraga {
+    margin: 2rem 0rem;
+  }
+  .oglasi .left-pretraga select {
+    width: 100%;
+  }
+  .oglasi .single-oglas {
+    zoom: 0.9;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+  .oglasi .left-pretraga {
+    margin: 2rem 1rem;
+  }
+  .oglasi .left-pretraga select {
+    width: 100%;
+  }
 }/*# sourceMappingURL=pretraga.css.map */

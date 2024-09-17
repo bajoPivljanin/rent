@@ -20,17 +20,16 @@
     <script>
         $(document).ready(function() {
             $('#stateDropdown').on('change', function() {
-                var stateId = $(this).val(); // Get the selected state ID
+                var stateId = $(this).val();
 
                 if (stateId) {
-                    // Make an AJAX request to fetch cities
                     $.ajax({
-                        url: './public/php/getCities.php', // Adjust the path if needed
+                        url: './public/php/getCities.php',
                         type: 'POST',
                         data: { state_id: stateId },
                         success: function(response) {
-                            $('#cityDropdown').html(response); // Populate the city dropdown with the response
-                            $('#cityDropdown').prop('disabled', false); // Enable the city dropdown
+                            $('#cityDropdown').html(response); 
+                            $('#cityDropdown').prop('disabled', false);
                         },
                         error: function(xhr, status, error) {
                             console.log('AJAX Error: ' + status + ': ' + error);
@@ -54,7 +53,7 @@
             <div class="row">
                
                 <div class="col-md-4">
-                <form action="">
+                <form action="" method="post">
                     <div class="left-pretraga">
                         <h1>Pretraga<i class="fa-solid fa-chevron-down"></i></h1>
 
@@ -91,7 +90,7 @@
                 
                 <div class="col-md-8">
                     <div class="pretraga-oglasi">
-                        <form action="">
+                        <form action="" method="post">
                             <input type="text" placeholder="Pretrazite mesto, drzavu, vozilo..."><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </form>
                         <p>Rezultati pretrage<i class="fa-solid fa-chevron-down"></i></p>

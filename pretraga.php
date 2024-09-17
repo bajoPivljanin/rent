@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../pretraga/pretragacss/pretraga.css">
+    <link rel="stylesheet" href="./pretraga/pretragacss/pretraga.css">
     <script src="https://kit.fontawesome.com/9310e1148a.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="left-nav">
-                        <a href="index.php"><img src="../public/site_img/logo.png" alt=""></a>
+                        <a href="index.php"><img src="./public/site_img/logo.png" alt=""></a>
                         <i class="fa-solid fa-bars" id="menuopen"></i>
                         <i class="fa-solid fa-xmark" id="menuclose"></i>
                     </div>
@@ -92,7 +92,7 @@
                         <div class="container">
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="../public/site_img/recommend.jpg" alt="">
+                                <img src="./public/site_img/recommend.jpg" alt="">
                             </div>
                             <div class="col-md-5">
                                 <div class="oglas-tekst">
@@ -120,7 +120,7 @@
                         <div class="container">
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="../public/site_img/recommend.jpg" alt="">
+                                <img src="./public/site_img/recommend.jpg" alt="">
                             </div>
                             <div class="col-md-5">
                                 <div class="oglas-tekst">
@@ -156,7 +156,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="left-footer">
-                        <a href="index.php"><img src="../public/site_img/logowhite.png" alt=""></a>
+                        <a href="index.php"><img src="./public/site_img/logowhite.png" alt=""></a>
                         <p>Brzo i jednostavno pronađi idealno vozilo za svoje putovanje, poslovnu upotrebu ili specijalnu priliku</p>
                         <i class="fa-brands fa-instagram"></i>
                         <i class="fa-brands fa-facebook"></i>
@@ -188,5 +188,7 @@
         </div>
         <p id="footerp">© Copyright 2024. All rights reserved.</p>
     </footer>
+
+    <script src="public/js/script.js"></script>
 </body>
 </html>

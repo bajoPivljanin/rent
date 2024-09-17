@@ -357,3 +357,134 @@ footer{
         text-align: center;
     }
 }
+
+@media screen and (min-width:320px) and (max-width:768px)
+{
+    nav{
+        .left-nav{
+            text-align: left;
+            position: relative;
+            #menuclose{
+                display: none;
+            }
+            i{
+                position: absolute;
+                right: 1rem;
+                top: 1.7rem;
+                font-size: 1.7rem;
+                transition: .3s;
+            }
+            #menuopen{
+                display: block;
+            }
+        }
+        .col-md-7{
+            padding: 0px;
+        }
+        .right-nav{
+            float:none;
+            height: 0rem;
+            display: none;
+            transition: .3s;
+            ul{
+                display: block;
+                text-align: center;
+                background-color: white;
+                height: 11rem;
+                width: 100%;
+                border-bottom: 1px solid #c5c5c5;
+                li{
+                    display: block;
+                    width: 100%;
+                    padding: 3px 0rem;
+                    border-top: 1px solid #c5c5c5;
+                }
+            }
+        }
+    }
+
+    .oglasi{
+        .left-pretraga{
+            margin: 2rem 1rem;
+            select{
+                width: 100%;
+            }
+        }
+        .pretraga-oglasi{
+            form{
+                text-align: center;
+                input{
+                    width: 70%;
+                }
+            }
+        }
+        .single-oglas{
+            img{
+                border-bottom-left-radius: 0px;
+            }
+            .oglas-tekst{
+                padding: 1rem 1.5rem;
+            }
+            .detalj-oglas{
+                display: block;
+                text-align: left;
+                padding-left: 1.5rem;
+                padding-bottom: 2rem;
+                h1{
+                    width: 100%;
+                    margin-top: -15px;
+                }
+            }
+        }
+    }
+
+    footer{
+        zoom: .9;
+        .left-footer{
+            display: block;
+            margin-bottom: 4rem;
+            margin-left: 2rem;
+            img{
+                margin-left: -1rem;
+            }
+        }
+        .mid-footer{
+            display: block;
+            margin-bottom: 4rem;
+            margin-left: 2rem;
+        }
+        .right-footer{
+            display: block;
+            margin-left: 2rem;
+        }
+      }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px)
+{
+    .oglasi{
+        .container{
+            max-width: 100%;
+        }
+        .left-pretraga{
+            margin: 2rem 0rem;
+            select{
+                width: 100%;
+            }
+        }
+        .single-oglas{
+            zoom: 0.9;
+        }
+    }
+}
+@media screen and (min-width:1024px) and (max-width:1400px)
+{
+    .oglasi{
+        .left-pretraga{
+            margin: 2rem 1rem;
+            select{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -26,7 +26,7 @@
                     <div class="right-nav">
                         <ul>
                             <li><a href="index.php">Početna</a></li>
-                            <li><a href="pretraga/pretraga.php">Pretraga</a></li>
+                            <li><a href="pretraga.php">Pretraga</a></li>
                             <li><a href="index.php">Oglašavanje</a></li>
                             <li><a href="index.php">Info</a></li>
                             <li><a href="index.php">Kontakt</a></li>

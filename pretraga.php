@@ -47,7 +47,7 @@
 </head>
 <body>
 
-<?php require_once "inc/header.php"?>
+<?php require_once "./inc/header.php"?>
 
     <div class="oglasi">
         <div class="container">

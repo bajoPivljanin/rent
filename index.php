@@ -12,7 +12,7 @@
     <title>Iznajmi vozilo</title>
 </head>
 <body>
-    <?php require_once "inc/header.php"?>
+    <?php require_once "./inc/header.php"?>
 
     <div class="hero-section">
         <h1>Iznajmi brzo vozi slobodno.</h1>

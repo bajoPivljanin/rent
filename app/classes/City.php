@@ -19,4 +19,11 @@ class City{
         $result = $this->conn->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    public function get_cities_from_state($state_id){
+        $sql = "SELECT * from city WHERE state_id = ?";
+        $result = $this->conn->prepare($sql);
+        $result->bind_param("i",$state_id);
+        $result->execute();
+        $rez = $result->get_result();
+    }
 }

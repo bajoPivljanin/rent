@@ -15,7 +15,7 @@ class State{
 
     }
     public function fetch_all(){
-        $sql = "SELECT * FROM state";
+        $sql = "SELECT * FROM state ORDER BY name ASC";
         $result = $this->conn->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }

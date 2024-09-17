@@ -12,30 +12,7 @@
     <title>Iznajmi vozilo</title>
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="left-nav">
-                        <a href="index.php"><img src="./public/site_img/logo.png" alt=""></a>
-                        <i class="fa-solid fa-bars" id="menuopen"></i>
-                        <i class="fa-solid fa-xmark" id="menuclose"></i>
-                    </div>
-                </div>
-                <div class="col-md-7">
-                    <div class="right-nav">
-                        <ul>
-                            <li><a href="index.php">Početna</a></li>
-                            <li><a href="pretraga/pretraga.php">Pretraga</a></li>
-                            <li><a href="index.php">Oglašavanje</a></li>
-                            <li><a href="index.php">Info</a></li>
-                            <li><a href="index.php">Kontakt</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php require_once "inc/header.php"?>
 
     <div class="hero-section">
         <h1>Iznajmi brzo vozi slobodno.</h1>
@@ -246,60 +223,24 @@
         </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="left-footer">
-                        <a href="index.php"><img src="./public/site_img/logowhite.png" alt=""></a>
-                        <p>Brzo i jednostavno pronađi idealno vozilo za svoje putovanje, poslovnu upotrebu ili specijalnu priliku</p>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mid-footer">
-                        <h4>Stranice</h4>
-                        <ul>
-                            <li><a href="#">Početna</a></li>
-                            <li><a href="#">Iznajmi</a></li>
-                            <li><a href="#">Oglašavanje</a></li>
-                            <li><a href="#">Info</a></li>
-                            <li><a href="#">Kontakt</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="right-footer">
-                        <h4>Kontakt</h4>
-                        <ul>
-                            <li><a href="#"><i class="fa-solid fa-phone"></i>079-234-123</a></li>
-                            <li><a href="#"><i class="fa-regular fa-envelope"></i>bravina@gmail.com</a></li>
-                            <li><a href="#"><i class="fa-regular fa-clock"></i>24/7</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p id="footerp">© Copyright 2024. All rights reserved.</p>
-    </footer>
+    <?php require_once "./inc/footer.php"?>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="public/js/script.js"></script>
     <script type="module">
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
         const swiper = new Swiper(...)
 
-</script>
-<script>
-    var typed = new Typed(".auto-type",{
-    strings: ["automobil","motocikl", "kombi", "kvad"],
-    typeSpeed: 150,
-    backSpeed: 150,
-    loop: true,
-})
-</script>
+    </script>
+    <script>
+        var typed = new Typed(".auto-type",{
+        strings: ["automobil","motocikl", "kombi", "kvad"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true,
+    })
+    </script>
 </body>
 </html>
